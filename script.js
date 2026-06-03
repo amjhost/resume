@@ -98,34 +98,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Terminal Commands Library
     const helpCmd = () => `
 Available commands:
-  <span class="cmd-hl">about</span>    - Executive profile summary
-  <span class="cmd-hl">skills</span>   - List core IT & Security competencies
+  <span class="cmd-hl">about</span>    - Executive profile description
+  <span class="cmd-hl">skills</span>   - List technical competencies & arsenal
   <span class="cmd-hl">scan</span>     - Run threat audit & print full resume profile
-  <span class="cmd-hl">contact</span>  - Phone, email, address records
+  <span class="cmd-hl">contact</span>  - Connect nodes (mobile, email, github)
   <span class="cmd-hl">clear</span>    - Clear screen
     `;
 
     const aboutCmd = () => `
 <span class="text-cyan">[profile//executive_summary]</span>
-> Amjad Ali - Cybersecurity Analyst & IT Administrator.
-> Possess practical knowledge of Linux, Docker, web hosting (cPanel),
-  CI/CD implementation, vulnerability assessment, and end-user support.
-> Strong troubleshooting, documentation, and technical communication.
+> Amjad Ali - Cybersecurity Analyst & Systems Automation Engineer.
+> Possesses practical knowledge of Linux Systems, Docker, cPanel web hosting,
+  CI/CD pipeline implementation, vulnerability assessment, and end-user support.
+> Dedicated to optimizing security operational workflows and infrastructure health.
     `;
 
     const skillsCmd = () => `
 <span class="text-cyan">[technical//capabilities]</span>
-* SysAdmin:     Linux, Windows, Desktop Support, Network Fundamentals
-* DevOps/Web:   Docker & Portainer, Jenkins CI/CD, Ansible, cPanel Hosting
-* Security:     Web App Security Testing, Vulnerability Assessment
-* Office/Ops:   MS Excel/Word, Data Entry, Digital Records, Documentation
+* SysAdmin:     Linux, Windows Server, Desktop Support, Network Protocols
+* DevOps/Web:   Docker & Portainer, Jenkins CI/CD, Ansible Playbooks, cPanel Hosting
+* Security:     Web App Security Testing (OWASP), Vulnerability Auditing
+* Office/Ops:   MS Excel/Word, Data Entry, Digital Documentation & Archives
     `;
 
     const contactCmd = () => `
 <span class="text-cyan">[contact//identity_nodes]</span>
 - Email:    <span class="term-highlight"><a href="mailto:amjhost@gmail.com" class="term-highlight">amjhost@gmail.com</a></span>
 - Mobile:   <span class="term-highlight">+91 9061231767</span>
-- Location: Trivandrum, Kerala, India
+- Location: Trivandrum, Kerala, India (Relocation: Ready)
 - GitHub:   <span class="term-highlight"><a href="https://github.com/amjhost" target="_blank" class="term-highlight">github.com/amjhost</a></span>
     `;
 
@@ -137,12 +137,12 @@ Available commands:
         
         let steps = [
             { text: "[*] Initializing audit suite...", delay: 200 },
-            { text: "[*] Resolving host environment variables...", delay: 400 },
+            { text: "[*] Checking local host environment...", delay: 400 },
             { text: "[*] Scanning core competency arrays...", delay: 800 },
-            { text: "[+] Found credentials: Amjad Ali (IT Support / Security Analyst)", delay: 1100 },
+            { text: "[+] Found credentials: Amjad Ali (Systems Automation & Security)", delay: 1100 },
             { text: "[*] Auditing training & certification records...", delay: 1400 },
-            { text: "[+] CEH status: EXPIRED | CPENT: CPENT_TRAINED [OK]", delay: 1600 },
-            { text: "[+] RHCSA & CCNA training profiles verified [OK]", delay: 1800 },
+            { text: "[+] CEH: CEH_TRAINED [OK] | CPENT: CPENT_TRAINED [OK]", delay: 1600 },
+            { text: "[+] RHCSA, CCNA, MCSE training profiles verified [OK]", delay: 1800 },
             { text: "[*] Fetching threat intelligence resume...", delay: 2000 }
         ];
 
@@ -184,17 +184,21 @@ Available commands:
         resultLine.innerHTML = `
 <span class="welcome-txt">========= AMJAD ALI // THREAT ASSESSMENT PROFILE =========</span>
 NAME:         Amjad Ali
-ROLE:         IT Professional & Cybersecurity Analyst
+ROLE:         Cybersecurity Analyst & Systems Automation Engineer
 MOBILE:       +91 9061231767
 EMAIL:        amjhost@gmail.com
 LOCATION:     Trivandrum, Kerala, India
 EXPERIENCE:
   - Security Analyst @ Tuxcentrix Consultancy (2022-2023)
+    * Conducted web app assessments & documented findings.
+    * Authored technical threat reports & remediation guidance.
   - Cybersecurity Intern @ Tuxcentrix Consultancy (2022)
+    * Supported vulnerability sweeps & compliance logs.
   - Computer Operator/IT Support @ Win at IT (2017-2020)
+    * Managed daily office operations, backups & support for 20+ users.
 PROJECTS:
-  - CI/CD Pipeline Integration (Jenkins, GitHub, Docker, Portainer)
-  - Web Hosting Administration (cPanel Domain/Mail Settings)
+  - CI/CD Pipeline Automation (Jenkins, GitHub, Docker, Portainer)
+  - Web Hosting Administration (cPanel Domain & Mail configurations)
 TRAININGS/CERTS:
   - Certified Ethical Hacker (CEH) - Expired
   - CPENT Training (Technovalley Consulting)
