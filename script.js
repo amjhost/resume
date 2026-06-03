@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    // Fade out lines based on distance
                     const alpha = (1 - dist / 120) * 0.08;
                     ctx.strokeStyle = `rgba(0, 255, 204, ${alpha})`;
                     ctx.lineWidth = 0.5;
@@ -99,25 +98,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // Terminal Commands Library
     const helpCmd = () => `
 Available commands:
-  <span class="cmd-hl">about</span>    - Executive profile description
-  <span class="cmd-hl">skills</span>   - List core skills
+  <span class="cmd-hl">about</span>    - Executive profile summary
+  <span class="cmd-hl">skills</span>   - List core IT & Security competencies
   <span class="cmd-hl">scan</span>     - Run threat audit & print full resume profile
+  <span class="cmd-hl">contact</span>  - Phone, email, address records
   <span class="cmd-hl">clear</span>    - Clear screen
     `;
 
     const aboutCmd = () => `
 <span class="text-cyan">[profile//executive_summary]</span>
-> Amjad Ali - Cyber Security Analyst
-> Automated security tool architecture developer.
-> Specialized in network sweeping pipelines, multi-process scripting,
-  and vulnerability mapping (Nmap / Nessus / Metasploit).
+> Amjad Ali - Cybersecurity Analyst & IT Administrator.
+> Possess practical knowledge of Linux, Docker, web hosting (cPanel),
+  CI/CD implementation, vulnerability assessment, and end-user support.
+> Strong troubleshooting, documentation, and technical communication.
     `;
 
     const skillsCmd = () => `
 <span class="text-cyan">[technical//capabilities]</span>
-* Code/Script:   Python (Concurrencies), Bash Shell, PowerShell, CSS
-* SecAuditing:   Nessus, Nmap (NSE), Wireshark, Metasploit, Docker, Git
-* Operations:    Subnet Sweep, Vulnerability Map, Log Sanitizer, Regex
+* SysAdmin:     Linux, Windows, Desktop Support, Network Fundamentals
+* DevOps/Web:   Docker & Portainer, Jenkins CI/CD, Ansible, cPanel Hosting
+* Security:     Web App Security Testing, Vulnerability Assessment
+* Office/Ops:   MS Excel/Word, Data Entry, Digital Records, Documentation
+    `;
+
+    const contactCmd = () => `
+<span class="text-cyan">[contact//identity_nodes]</span>
+- Email:    <span class="term-highlight"><a href="mailto:amjhost@gmail.com" class="term-highlight">amjhost@gmail.com</a></span>
+- Mobile:   <span class="term-highlight">+91 9061231767</span>
+- Location: Trivandrum, Kerala, India
+- GitHub:   <span class="term-highlight"><a href="https://github.com/amjhost" target="_blank" class="term-highlight">github.com/amjhost</a></span>
     `;
 
     // Mock scan system function (shows progress loader)
@@ -128,12 +137,12 @@ Available commands:
         
         let steps = [
             { text: "[*] Initializing audit suite...", delay: 200 },
-            { text: "[*] Generating scanning processes...", delay: 400 },
-            { text: "[*] Scanning active host ranges: 192.168.1.0/24", delay: 800 },
-            { text: "[+] Target sweep active. Found: 1 host (Amjad Ali)", delay: 1100 },
-            { text: "[*] Scanning ports and vulnerability vectors...", delay: 1400 },
-            { text: "[+] SMB Security Mode: Encrypted [Audit Passed]", delay: 1600 },
-            { text: "[+] SSL Ciphers: Secure [Audit Passed]", delay: 1800 },
+            { text: "[*] Resolving host environment variables...", delay: 400 },
+            { text: "[*] Scanning core competency arrays...", delay: 800 },
+            { text: "[+] Found credentials: Amjad Ali (IT Support / Security Analyst)", delay: 1100 },
+            { text: "[*] Auditing training & certification records...", delay: 1400 },
+            { text: "[+] CEH status: EXPIRED | CPENT: CPENT_TRAINED [OK]", delay: 1600 },
+            { text: "[+] RHCSA & CCNA training profiles verified [OK]", delay: 1800 },
             { text: "[*] Fetching threat intelligence resume...", delay: 2000 }
         ];
 
@@ -174,15 +183,26 @@ Available commands:
         resultLine.className = "term-line";
         resultLine.innerHTML = `
 <span class="welcome-txt">========= AMJAD ALI // THREAT ASSESSMENT PROFILE =========</span>
-NAME:      Amjad Ali
-ROLE:      Cyber Security Analyst & Automation Engineer
-EMAIL:     amjhost@gmail.com
-GITHUB:    github.com/amjhost
-PROJECTS:  - Pentest-Tools (Multi-threaded scanner, 50x speed improvements)
-           - Threat Log Sanitizer (IP validation, numerical sorting)
-EXPERIENCE: - Open-Source Security Utilities Developer (2024-Present)
-            - Subnet Vulnerability Auditing Intern (2023-2024)
-TARGETS:    eJPT, CompTIA Security+
+NAME:         Amjad Ali
+ROLE:         IT Professional & Cybersecurity Analyst
+MOBILE:       +91 9061231767
+EMAIL:        amjhost@gmail.com
+LOCATION:     Trivandrum, Kerala, India
+EXPERIENCE:
+  - Security Analyst @ Tuxcentrix Consultancy (2022-2023)
+  - Cybersecurity Intern @ Tuxcentrix Consultancy (2022)
+  - Computer Operator/IT Support @ Win at IT (2017-2020)
+PROJECTS:
+  - CI/CD Pipeline Integration (Jenkins, GitHub, Docker, Portainer)
+  - Web Hosting Administration (cPanel Domain/Mail Settings)
+TRAININGS/CERTS:
+  - Certified Ethical Hacker (CEH) - Expired
+  - CPENT Training (Technovalley Consulting)
+  - RHCSA, CCNA, MCSE Trainings (Blueshell Securities)
+EDUCATION:
+  - Higher Secondary (+2 Computer Science) - CBSE Completed 2020
+LANGUAGES:    English, Malayalam, Hindi, Tamil
+PERSONAL:     D.O.B: 22 Sep 2002 | Nationality: Indian | Relocatable: Yes
 <span class="welcome-txt">===========================================================</span>
         `;
         consoleScreen.insertBefore(resultLine, promptRow);
@@ -224,6 +244,8 @@ TARGETS:    eJPT, CompTIA Security+
                     response.innerHTML = aboutCmd();
                 } else if (val === "skills") {
                     response.innerHTML = skillsCmd();
+                } else if (val === "contact") {
+                    response.innerHTML = contactCmd();
                 } else {
                     response.innerHTML = `Command not recognized: <span class="text-secondary">${val}</span>. Type <span class="cmd-hl">help</span> for commands.`;
                 }
