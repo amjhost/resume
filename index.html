@@ -3,207 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amjad Ali | Cyber Security Analyst Portfolio</title>
+    <title>Amjad Ali | Cyber Security Analyst - Command Console</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="decorations">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-    </div>
+    <!-- Background Canvas for Cyber Network Grid -->
+    <canvas id="cyber-grid"></canvas>
+
+    <!-- Top Scanning Indicator -->
+    <header class="top-nav animate-fade-in">
+        <div class="system-status">
+            <span class="pulse-ring"></span>
+            <span class="nav-status-text">SEC-NODE // AMJAD_ALI: ACTIVE</span>
+        </div>
+        <div class="header-logo">
+            <i class="fa-solid fa-cube text-glow-cyan"></i> BLACKBOX_SEC v2.0
+        </div>
+    </header>
 
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="profile-card card animate-fade-in">
-                <div class="status-indicator">
-                    <span class="pulse-dot"></span>
-                    <span class="status-text">AVAILABLE FOR PROJECTS</span>
-                </div>
-                
-                <div class="avatar-container">
-                    <div class="avatar-glow"></div>
-                    <i class="fa-solid fa-user-shield avatar-placeholder"></i>
-                </div>
-                
-                <h1 class="name">Amjad Ali</h1>
-                <p class="title">Cyber Security Analyst</p>
-                <p class="subtitle">Security Automation Engineer</p>
-
-                <hr class="separator">
-
-                <ul class="contact-list">
-                    <li>
-                        <i class="fa-solid fa-envelope icon"></i>
-                        <a href="mailto:amjhost@gmail.com">amjhost@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-github icon"></i>
-                        <a href="https://github.com/amjhost" target="_blank">github.com/amjhost</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot icon"></i>
-                        <span>Remote / Global</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Skills Card -->
-            <div class="skills-card card animate-fade-in delay-1">
-                <h2 class="card-heading"><i class="fa-solid fa-screwdriver-wrench icon-sec"></i> Technical Arsenal</h2>
-                
-                <div class="skill-group">
-                    <h3>Languages & Scripting</h3>
-                    <div class="tags">
-                        <span class="tag">Python (Concurrent)</span>
-                        <span class="tag">Bash</span>
-                        <span class="tag">PowerShell</span>
-                        <span class="tag">HTML / CSS</span>
+            <!-- Profile Info Card with Glow Border -->
+            <div class="glow-card card animate-slide-up" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <div class="profile-header">
+                        <div class="hexagon-container">
+                            <div class="hexagon-glow"></div>
+                            <div class="hexagon">
+                                <i class="fa-solid fa-user-shield avatar-icon"></i>
+                            </div>
+                        </div>
+                        <h1 class="name">Amjad Ali</h1>
+                        <p class="role-title">CYBER SECURITY ANALYST</p>
+                        <p class="role-desc">Security Automation Engineer</p>
                     </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Tools & Platforms</h3>
-                    <div class="tags">
-                        <span class="tag">Nmap (NSE)</span>
-                        <span class="tag">Nessus</span>
-                        <span class="tag">Wireshark</span>
-                        <span class="tag">Metasploit</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Git</span>
-                    </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Sec Operations</h3>
-                    <div class="tags">
-                        <span class="tag">Vulnerability Audit</span>
-                        <span class="tag">Host Sweep</span>
-                        <span class="tag">Regex Parsing</span>
-                        <span class="tag">Log Sanitization</span>
-                        <span class="tag">AD Auditing</span>
-                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <ul class="contact-links">
+                        <li>
+                            <i class="fa-solid fa-envelope info-icon"></i>
+                            <div class="info-group">
+                                <span class="info-label">EMAIL</span>
+                                <a href="mailto:amjhost@gmail.com" class="info-value">amjhost@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-github info-icon"></i>
+                            <div class="info-group">
+                                <span class="info-label">GITHUB</span>
+                                <a href="https://github.com/amjhost" target="_blank" class="info-value">github.com/amjhost</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-crosshairs info-icon"></i>
+                            <div class="info-group">
+                                <span class="info-label">LOCATION</span>
+                                <span class="info-value">Remote / Global</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Certifications Card -->
-            <div class="certs-card card animate-fade-in delay-2">
-                <h2 class="card-heading"><i class="fa-solid fa-certificate icon-sec"></i> Target Certifications</h2>
-                <ul class="cert-list">
-                    <li>
-                        <i class="fa-solid fa-shield-halved badge-icon"></i>
-                        <div>
-                            <h4>CompTIA Security+</h4>
-                            <p>Information Security Fundamentals</p>
+            <!-- Skills Dashboard -->
+            <div class="glow-card card animate-slide-up delay-1" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <h2 class="card-title"><i class="fa-solid fa-terminal text-cyan"></i> Skills Arsenal</h2>
+                    
+                    <div class="skill-category">
+                        <span class="cat-label">AUTOMATION & CODE</span>
+                        <div class="tags-group">
+                            <span class="cyber-tag">Python (Concurrent)</span>
+                            <span class="cyber-tag">Bash Shell</span>
+                            <span class="cyber-tag">PowerShell</span>
+                            <span class="cyber-tag">HTML5 / CSS3</span>
                         </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-terminal badge-icon"></i>
-                        <div>
-                            <h4>eJPT</h4>
-                            <p>Junior Penetration Tester</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="cat-label">AUDIT & INTRUSION</span>
+                        <div class="tags-group">
+                            <span class="cyber-tag">Nmap (NSE Engine)</span>
+                            <span class="cyber-tag">Nessus Pro</span>
+                            <span class="cyber-tag">Metasploit</span>
+                            <span class="cyber-tag">Wireshark</span>
+                            <span class="cyber-tag">Docker</span>
+                            <span class="cyber-tag">Git Versioning</span>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="cat-label">CORE SECURITY</span>
+                        <div class="tags-group">
+                            <span class="cyber-tag">Vulnerability Audit</span>
+                            <span class="cyber-tag">Subnet Sweeping</span>
+                            <span class="cyber-tag">Regex Log Parsing</span>
+                            <span class="cyber-tag">Data Sanitization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="glow-card card animate-slide-up delay-2" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <h2 class="card-title"><i class="fa-solid fa-medal text-purple"></i> Cert Targets</h2>
+                    <div class="cert-item">
+                        <i class="fa-solid fa-shield-halved cert-icon text-cyan"></i>
+                        <div class="cert-info">
+                            <span class="cert-name">CompTIA Security+</span>
+                            <span class="cert-desc">Core Security Fundamentals</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fa-solid fa-microchip cert-icon text-purple"></i>
+                        <div class="cert-info">
+                            <span class="cert-name">eJPT</span>
+                            <span class="cert-desc">Junior Penetration Tester</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Main Workspace -->
         <main class="main-content">
-            <!-- Summary -->
-            <section class="card section-card animate-slide-up">
-                <h2 class="section-title"><i class="fa-solid fa-receipt icon-accent"></i> Profile Summary</h2>
-                <p class="summary-text">
-                    Proactive and detail-oriented <strong>Cyber Security Analyst</strong> with a strong foundation in network security, vulnerability auditing, and security tool automation. Experienced in building customized pentesting suites to execute parallel sweeps, assess host vulnerabilities (SMB, SSL/TLS, RDP), and sanitize raw threat logs. Skilled in leveraging Python and scripting languages to optimize security operational workflows, reducing audit latency and improving threat detection capabilities.
-                </p>
-            </section>
-
-            <!-- Experience -->
-            <section class="card section-card animate-slide-up delay-1">
-                <h2 class="section-title"><i class="fa-solid fa-briefcase icon-accent"></i> Experience Timeline</h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024 - PRESENT</div>
-                        <h3 class="timeline-title">Cyber Security Tool Developer</h3>
-                        <h4 class="timeline-company">Open Source Projects</h4>
-                        <ul class="timeline-points">
-                            <li>Created the <strong>Pentest-Tools</strong> network assessment suite, which bundles checkers, scanners, and CVE scripts into an interactive console.</li>
-                            <li>Implemented parallel scanning structures utilizing Python <code>multiprocessing</code> and <code>concurrent.futures</code>, reducing subnet sweep delays by <strong>up to 50x</strong>.</li>
-                            <li>Engineered regex-based threat data extraction utilities, facilitating clean, de-duplicated IP arrays for direct SIEM ingestion.</li>
-                            <li>Optimized multi-process codes for cross-platform support on Windows and Linux targets.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2023 - 2024</div>
-                        <h3 class="timeline-title">Security Analyst Intern</h3>
-                        <h4 class="timeline-company">Vulnerability Assessment Operations</h4>
-                        <ul class="timeline-points">
-                            <li>Conducted automated network scans of subnets using Nessus and aggregated vulnerability indices.</li>
-                            <li>Identified insecure host features, including weak SSL/TLS cipher suites and exposed active directory protocols.</li>
-                            <li>Drafted Proof of Concept reports outlining threat impacts and providing remediation guidance to systems administrators.</li>
-                            <li>Assisted in shell scripting (Bash/Powershell) to automate daily system configuration audits.</li>
-                        </ul>
-                    </div>
+            <!-- Executive Summary -->
+            <section class="glow-card card animate-slide-up" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <h2 class="section-heading"><i class="fa-solid fa-address-card text-cyan"></i> Executive Overview</h2>
+                    <p class="overview-para">
+                        Proactive, details-centric <strong>Cyber Security Analyst</strong> specializing in vulnerability auditing, network scanning configurations, and security tool automation. Built and managed open-source python-based multi-threaded pentesting tools that perform rapid subnet sweeps and automated NSE script runs. Expert in scripting secure execution mechanisms that translate dynamically across heterogeneous operating systems (Windows and Linux).
+                    </p>
                 </div>
             </section>
 
-            <!-- Featured Projects -->
-            <section class="card section-card animate-slide-up delay-2">
-                <h2 class="section-title"><i class="fa-solid fa-code icon-accent"></i> Featured Security Projects</h2>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon"><i class="fa-solid fa-cubes"></i></span>
-                            <h3>Pentest-Tools Suite</h3>
+            <!-- Interactive Terminal Command Station -->
+            <section class="glow-card card terminal-card animate-slide-up delay-1" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="window-controls">
+                            <span class="control-dot red"></span>
+                            <span class="control-dot yellow"></span>
+                            <span class="control-dot green"></span>
                         </div>
-                        <p>An interactive, multi-threaded command dashboard running subnet ping checkers, CIDR sweepers, and concurrent Nmap NSE vulnerability audits.</p>
-                        <div class="project-footer">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Multiprocessing</span>
-                            <span class="tech-badge">Nmap</span>
-                        </div>
+                        <div class="window-title">root@blackbox-console:~</div>
+                        <div class="window-meta">BA-992 // ONLINE</div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-                            <h3>Threat Data Sanitizer</h3>
-                        </div>
-                        <p>A regex-based utility that extracts valid IPv4 addresses from raw text logs, removes duplicates, and sorts them numerically for ingestion. </p>
-                        <div class="project-footer">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Regex</span>
-                            <span class="tech-badge">Log Audit</span>
+                    <div class="terminal-screen" id="console-screen">
+                        <div class="term-line welcome-txt">SYSTEM SECURE CORE TERMINAL // ACCESS ACTIVE</div>
+                        <div class="term-line text-secondary">Try typing commands: <span class="cmd-hl">help</span>, <span class="cmd-hl">about</span>, <span class="cmd-hl">scan</span>, <span class="cmd-hl">skills</span>, <span class="cmd-hl">clear</span></div>
+                        <div class="term-line">&nbsp;</div>
+                        <div class="console-prompt-line" id="prompt-row">
+                            <span class="console-prompt">amjhost@sec-node:~$</span>
+                            <input type="text" id="console-input" autocomplete="off" autofocus>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Terminal Console -->
-            <section class="card terminal-card animate-slide-up delay-3">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="btn close"></span>
-                        <span class="btn minimize"></span>
-                        <span class="btn maximize"></span>
+            <!-- Experience Timeline -->
+            <section class="glow-card card animate-slide-up delay-2" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <h2 class="section-heading"><i class="fa-solid fa-code-commit text-purple"></i> Threat & Operations Experience</h2>
+                    
+                    <div class="timeline">
+                        <div class="timeline-block">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-period">2024 - ACTIVE</span>
+                                <h3 class="timeline-position">Automation Suite Lead Developer</h3>
+                                <h4 class="timeline-company">Open-Source Cyber Utilities</h4>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Developed **Pentest-Tools**, an advanced parallel IP sweep and vulnerability scanner menu in Python.</li>
+                                <li>Integrated `ThreadPoolExecutor` and multiprocess pools, boosting network sweeping speeds by <strong>50x</strong> compared to serial scripts.</li>
+                                <li>Implemented regex-based data sanitizers validating IPv4 fields, removing duplicates, and sorting IP arrays numerically for target list integration.</li>
+                                <li>Solved cross-platform system calls ensuring scripts automatically resolve Windows and Linux socket pings.</li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-block">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-period">2023 - 2024</span>
+                                <h3 class="timeline-position">Cyber Security Intern</h3>
+                                <h4 class="timeline-company">Subnet Vulnerability Auditing</h4>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Administered automated vulnerability scans against network subnets using Nessus Professional.</li>
+                                <li>Identified security defects including exposed legacy SMB systems, weak SSL ciphers, and unencrypted RDP access.</li>
+                                <li>Compiled comprehensive Proof of Concept (POC) reports recommending patching and configuration mitigations.</li>
+                                <li>Automated threat log parsing tasks utilizing Bash and PowerShell scripts.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="terminal-title">amjhost@security-node:~</div>
                 </div>
-                <div class="terminal-body" id="terminal">
-                    <div class="line">Welcome to Security Terminal node. Type <span class="term-highlight">help</span> for a list of commands.</div>
-                    <div class="line">&nbsp;</div>
-                    <div class="input-line" id="prompt-line">
-                        <span class="prompt">amjhost@security-node:~$</span>
-                        <input type="text" id="terminal-input" autocomplete="off" autofocus>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="glow-card card animate-slide-up delay-3" data-glow>
+                <div class="card-glow-layer"></div>
+                <div class="card-content">
+                    <h2 class="section-heading"><i class="fa-solid fa-cubes text-cyan"></i> Audited Security Releases</h2>
+                    <div class="projects-flex">
+                        <div class="project-box">
+                            <div class="project-title-row">
+                                <i class="fa-solid fa-shield-halved project-badge text-cyan"></i>
+                                <h3>Pentest-Tools Suite</h3>
+                            </div>
+                            <p class="project-desc">A cross-platform security dashboard running automated active pings, CIDR block ranges, and concurrent Nmap NSE script assessments.</p>
+                            <div class="project-techs">
+                                <span class="tech-tag">Python 3</span>
+                                <span class="tech-tag">Multiprocessing</span>
+                                <span class="tech-tag">Nmap Engine</span>
+                            </div>
+                        </div>
+
+                        <div class="project-box">
+                            <div class="project-title-row">
+                                <i class="fa-solid fa-database project-badge text-purple"></i>
+                                <h3>Threat Log Parser</h3>
+                            </div>
+                            <p class="project-desc">A python validation utility extracting correct IPv4 logs from noisy texts, eliminating duplicates, and sorting targets numerically.</p>
+                            <div class="project-techs">
+                                <span class="tech-tag">Python 3</span>
+                                <span class="tech-tag">Regex</span>
+                                <span class="tech-tag">Log Filtering</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
